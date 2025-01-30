@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediLife</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="x-icon" href="asset/logo.1.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  </head>
+  <body>
+    <div class="loader" id="loader">
+
+    <header></header>
+    
+    <div class="collapsed" id="navbar">
+      <nav>
+        <ul>
+          <li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
+          <li><i class="fa-solid fa-music"></i><a href="Music/music.html">Music</a></li>
+          <li><i class="fa-solid fa-mountain"></i><a href="scene/scene.html">Scene</a></li>
+          <li>
+            <i class="fa-solid fa-heart-pulse"></i
+            ><a href="relax/relaxnbreathe.html">Relax & Breathe</a>
+          </li>
+          
+        </ul>
+      </nav>
+    </div>
+    <div class="rightpannel">
+      <div class="container1"> 
+        <img class="logo"  src="asset/logo.1.png" alt="Logo" />
+        <div class="head">    
+         <h1>
+            <span class="greeting">Good Morning</span>
+            <span class="name" id="name">[Your Name]</span>
+          </h1>
+
+          <h2 class="typing">Meditation is bringing the mind home.</h2>
+        </div>
+      </div>
+      <div class="container2">
+        <div class="btn1"><button onclick="toggleText('text1')">What is you Matter? <i class="fa-solid fa-caret-down"></i></button>
+        <span id="text1" class="hidden-text"><b>U matter</b> is a meditation and relaxation app that designed to take you some moment to relax and breathe. <b>U Matter</b> mission is to help you find your inner peace and improve your mental health.</span></div>
+       </div>
+      <div class="btn2"><button onclick="toggleText('text2')">How can we Help you? <i class="fa-solid fa-caret-down"></i></button>
+        <span id="text2" class="hidden-text"><b>U Matter</b> helps you to relax your body and mind with meditation music, nature scenery with sounds, an AI voice asistant to talk to and breathing exercises to help you cope with your stress and anxiety. <b>U Matter</b>  can help you to let go of the busy mind, and relax your body. <a href="">See more</a></span></div>
+
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
