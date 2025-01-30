@@ -16,7 +16,7 @@ Clone the repository to your local machine:
 bash
 Copy
 Edit
-git clone https://github.com/your-username/meditation-app.git
+git clone https://github.com/shivanipatil101/meditation-app.git
 Navigate to the project folder:
 
 bash
