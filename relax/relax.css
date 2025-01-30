@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background-color: #cbc5c5;
+  background-size: cover;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* Left Panel */
+.leftpannel {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+nav {
+  width: 100%;
+  margin-top: 50px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-top: 20px;
+}
+
+.leftpannel li a {
+  color: #d9a9a9;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.leftpannel li i {
+  color: #fff;
+  margin: 10px;
+}
+
+.leftpannel li {
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.leftpannel li:hover {
+  background-color: #724b4b;
+  border-radius: 5px;
+  color: #000;
+  width: 100%;
+}
+
+/* Right Panel */
+.rightpannel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 22vw;
+  width: 75vw;
+  padding: 20px;
+  gap: 30px;
+}
+
+.heading {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.heading h1 {
+  font-size: 50px;
+  color: #4b4141;
+  text-align: center;
+}
+
+.heading p {
+  font-size: 30px;
+  color: #7d4d4d;
+  text-align: center;
+}
+
+/* Breathing Section Boxes */
+.box1, .box2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 200px;
+  width: 600px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.box1 {
+  background-image: url(../asset/breathing.png);
+}
+
+.box2 {
+  background-image: url(../asset/478.avif);
+}
+
+.leftbox {
+  margin: 40px;
+}
+
+.leftbox h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #4d3a3a;
+}
+
+.leftbox span {
+  color: #fff;
+}
+
+.rightbox {
+  display: flex;
+  margin: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.btn1, .btn2 {
+  border: none;
+  padding: 10px;
+  width: 100px;
+  height: 40px;
+  background-color: #ffffff;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #302e2e;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn1:hover, .btn2:hover {
+  transform: scale(1.1);
+  background-color: #9a5e5e;
+  color: #fff;
+}
+
+/* Breathing Page */
+.breathing-page {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Breathing Circle */
+.circle {
+  width: 120px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: breathe 8s infinite ease-in-out;
+}
+
+/* Breathing Animation */
+@keyframes breathe {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+/* Breathing Instruction Text */
+.instruction {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+  animation: fadeText 8s infinite ease-in-out;
+}
+
+@keyframes fadeText {
+  0%, 100% { opacity: 1; content: "Inhale..."; }
+  50% { opacity: 0.5; content: "Exhale..."; }
+}
+
+/* Back Button */
+.btn-back {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* ================================== */
+/* 🌍 Media Queries for Responsive Design */
+/* ================================== */
+
+/* 📱 Small Screens (320px - 480px) */
+@media (max-width: 480px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .leftpannel {
+    
+    padding: 10px;
+  }
+
+  .leftpannel li a {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .rightpannel {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .heading h1 {
+    font-size: 30px;
+  }
+
+  .heading p {
+    font-size: 20px;
+  }
+
+  .box1, .box2 {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .leftbox, .rightbox {
+    margin: 20px;
+    text-align: center;
+  }
+
+  .btn1, .btn2 {
+    width: 100%;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .instruction {
+    font-size: 18px;
+  }
+}
+
+/* 📲 Tablets & Small Laptops (481px - 768px) */
+@media (max-width: 768px) {
+  .leftpannel {
+    width: 25vw;
+  }
+
+  .rightpannel {
+    margin-left: 27vw;
+    width: 70vw;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .heading h1 {
+    font-size: 40px;
+  }
+
+  .heading p {
+    font-size: 24px;
+  }
+
+  .box1, .box2 {
+    flex-direction: column;
+    height: auto;
+    width: 85%;
+    padding: 15px;
+  }
+
+  .leftbox, .rightbox {
+    margin: 20px;
+    text-align: center;
+  }
+
+  .circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .instruction {
+    font-size: 20px;
+  }
+}
